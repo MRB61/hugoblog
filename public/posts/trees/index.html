@@ -1,0 +1,1296 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>On random trees with limited information &middot; On everything</title>
+    <meta name="title" content="On random trees with limited information &middot; On everything">
+  
+
+  
+  
+    <meta name="description" content="Post on Random Trees with limited memory">
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/trees/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/trees/">
+  <meta property="og:site_name" content="On everything">
+  <meta property="og:title" content="On random trees with limited information">
+  <meta property="og:description" content="Post on Random Trees with limited memory">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-01T00:00:00+00:00">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="On random trees with limited information">
+  <meta name="twitter:description" content="Post on Random Trees with limited memory">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.964360eaf9d070bcd55a025c3f50c6ae40528298f58b9b17b3b2f719ad9ae7d3af83b27fdfd8eaaf276426e446ec95606ab229a7e0900777f9194812a63b9246.css"
+    integrity="sha512-lkNg6vnQcLzVWgJcP1DGrkBSgpj1i5sXs7L3Ga2a59Ovg7J/39jqrydkJuRG7JVgarIpp&#43;CQB3f5GUgSpjuSRg==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.e3d337dd3f18427eb20aa355839d583ef6382bc42e34cfe789adb9358d463ef51f53691e32f524259380d4d3add49162f522426784990f3a5dbd39c33c6ed05a.js"
+      integrity="sha512-49M33T8YQn6yCqNVg51YPvY4K8QuNM/nia25NY1GPvUfU2keMvUkJZOA1NOt1JFi9SJCZ4SZDzpdvTnDPG7QWg=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/lib/katex/katex.min.a6685279faabcd7302505c0f7c7a823623dd89d8308daf0a3f5224bb9cd05fd3cb0532a8632863d2e6cd756eeb781596788fe96eb562f82e4ed4c43d3d2056a2.css"
+    integrity="sha512-pmhSefqrzXMCUFwPfHqCNiPdidgwja8KP1Iku5zQX9PLBTKoYyhj0ubNdW7reBWWeI/pbrVi&#43;C5O1MQ9PSBWog==">
+  
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="/js/katex.bundle.a10a4a0655682a978b0422e48a40f3515d4d96c8e600a48e3dad34029a55cc00b128b89a908855227d1c07897ce09cdfe9f0d57decb148cb73f17dbb8a0a715c.js"
+    integrity="sha512-oQpKBlVoKpeLBCLkikDzUV1NlsjmAKSOPa00AppVzACxKLiakIhVIn0cB4l84Jzf6fDVfeyxSMtz8X27igpxXA=="
+    id="katex-render"></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "On random trees with limited information",
+    "headline": "On random trees with limited information",
+    
+    "abstract": "Post on Random Trees with limited memory",
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/trees/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-12-01T00:00:00\u002b00:00",
+    "datePublished": "2025-12-01T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-12-01T00:00:00\u002b00:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2599"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Homepage"
+  title="On everything">
+  
+  
+    <p class="text-base font-medium">
+      Homepage
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/misc/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Misc"
+  title="Miscellaneous">
+  
+  
+    <p class="text-base font-medium">
+      Misc
+    </p>
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Homepage"
+    title="On everything">
+    
+    
+      <p class="text-bg font-bg">
+        Homepage
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/misc/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Misc"
+    title="Miscellaneous">
+    
+    
+      <p class="text-bg font-bg">
+        Misc
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  <article class="max-w-full">
+    <header>
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        On random trees with limited information
+      </h1>
+    </header>
+    <section class="max-w-full mt-6 prose dark:prose-invert">
+      
+
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css">
+
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js"></script>
+
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof renderMathInElement !== "undefined") {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$",  right: "$$",  display: true  },
+          { left: "\\[", right: "\\]", display: true  },
+          { left: "\\(", right: "\\)", display: false },
+          { left: "$",   right: "$",   display: false }
+        ]
+      });
+    }
+  });
+</script>
+
+
+
+
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css">
+
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js"></script>
+
+<script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof renderMathInElement !== "undefined") {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$",  right: "$$",  display: true  },
+          { left: "\\[", right: "\\]", display: true  },
+          { left: "\\(", right: "\\)", display: false },
+          { left: "$",   right: "$",   display: false }
+        ]
+      });
+    }
+  });
+</script>
+
+
+<p>On this post I intend to present some thoughts I have gathered when coming across <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. How I found that paper is a good starting point. I had the idea of representing the network of “Mathematics”, its own fields and how they are connected. The initial objective was to portray the obvious idea that not even Mathematics escape trends. You can find the product of those thoughts in the miscellaneous section.</p>
+<p>However, when working with Wikipedia as a network, I observed that the “relevant” information, i.e., the information that “matters” when introducing a new vertex, was diluting when increasing the graph size: new vertices rarely linked with old vertices. Obviously there is some fault in how I designed the algorithm and structured the network exploration. Nevertheless, there was something mathematically interesting under it. Thus, I searched on arXiv for the latest preprints on this topic and found <sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>Let’s lay down some groundwork:</p>
+<p>We denote \(\{\mathcal{T}_n : n \geq 1\}\) a sequence of trees, and \(B(T,r)\) the tree up to distance \(r\) from the root. Unfortunately they denote \(\mathbb{T}\) the space of $\textbf{finite}$ trees; one accustomed to other fields might see the circle. This space is endowed with the following distance. For \(t,s \in \mathbb{T}\),</p>
+\[
+d(t,s) := \frac{1}{1 + R^*}
+\qquad
+R^* = \sup\{ r : B(t,r) \sim B(s,r) \}.
+\]<div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/tree-avocado.png" alt="Tree 1" />
+    
+    <figcaption>t</figcaption>
+    </figure>
+
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/output_2.png" alt="Tree 2" />
+    
+    <figcaption>s</figcaption>
+    </figure>
+</div>
+<p>On that figure, clearly \(d_{\mathbb{T}}(t,s)=1\) because even at distance \(1\) from the root they are not isomorphic. This also tells us that \(d_{\mathbb{T}}(t,s) \leq 1\) for any \(t,s \in \mathbb{T}\). One must note that, thanks to the supremum, we can achieve distance \(0\): if \(t,s\) are both isomorphic up to their maximal distance, i.e. their height, say \(n\), then they are also isomorphic up to \(n+1\).</p>
+<p>Now a concept central to everything we will work on later is the decomposition of a tree into its subtrees, or fringes. Given a walk inside the tree \(t\) from vertex to root,
+\((v_0, v_1, \dots, v_h = \rho)\), we can decompose the tree uniquely into \(h+1\) trees
+\(f_0(v,t), \dots, f_h(v,t)\), where \(f_i(v,t)\) is the tree rooted at \(v_i\) with all the vertices for which there exists a walk in \(t\) from the root passing through \(v_i\) but not \(v_{i-1}\). This is just the mathematical way of partitioning the tree from bottom to top. A representation is due:</p>
+<div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/output_3.png" alt="Tree 1" />
+    
+    <figcaption>Tree</figcaption>
+    </figure>
+</div>
+If we take the penultimate vertex from the right and take the unique path to the root, the fringe decomposition would be the following
+<div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+<p>
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/f_0.png" alt="Tree 1" />
+    
+    <figcaption>f_0</figcaption>
+    </figure>
+
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/f_1.png" alt="Tree 1" />
+    
+    <figcaption>f_1</figcaption>
+    </figure></p>
+</div>
+<div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+<p>
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/f_2.png" alt="Tree 1" />
+    
+    <figcaption>f_2</figcaption>
+    </figure>
+
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/f_3.png" alt="Tree 1" />
+    
+    <figcaption>f_3</figcaption>
+    </figure></p>
+</div>
+<p>Now, if we take each $f_i$ and join their roots in order we would recover the original tree.</p>
+<p>We now formalise these ideas with the space of sequences of trees and the notion of fringe decomposition.</p>
+<p>Let \(\mathbb{T}\) be the space of finite rooted trees equipped with the metric \(d_{\mathbb{T}}\) defined above, and let
+</p>
+\[
+\mathbb{T}^{\infty}
+:= \big\{ (t_0,t_1,\dots) : t_i \in \mathbb{T} \text{ for all } i \ge 0 \big\}
+\]<p>
+be the space of sequences of finite trees.</p>
+<p>Given a rooted tree \(t \in \mathbb{T}\) and a vertex \(v\) of \(t\), we define the <strong>fringe decomposition</strong> of \(t\) along the path from \(v\) to the root by
+</p>
+\[
+F(v,t)
+  = \bigl( f_0(v,t),f_1(v,t),\dots,f_h(v,t),\varnothing,\varnothing,\dots \bigr)
+  \in \mathbb{T}^{\infty},
+\]<p>
+where \(f_i(v,t)\) is the subtree of \(t\) rooted at the \(i\)-th vertex on the (unique) path from \(v\) to the root, and \(h\) is the length of that path.</p>
+<p>For \(k \ge 0\) we write
+</p>
+\[
+F_k(v,t)
+  := \bigl( f_0(v,t),\dots,f_k(v,t),\varnothing,\varnothing,\dots \bigr),
+\]<p>
+and we call \(f_0(v,t)\) the <strong>fringe of \(t\) at \(v\)</strong>.</p>
+<p>On \(\mathbb{T}^{\infty}\) we extend the metric \(d_{\mathbb{T}}\) by
+</p>
+\[
+d_{\mathbb{T}^{\infty}} \bigl( (t_0,t_1,\dots),(s_0,s_1,\dots) \bigr)
+  := \sum_{i=0}^{\infty} \frac{1}{2^{i}}\, d_{\mathbb{T}}(t_i,s_i).
+\]<p>An element
+</p>
+\[
+\omega = (t_0,t_1,\dots) \in \mathbb{T}^{\infty}
+\quad\text{with}\quad |t_i| \ge 1 \text{ for all } i \ge 0
+\]<p>
+can be viewed as a locally finite infinite rooted tree with a unique infinite path, in the following way.</p>
+<p>To obtain the infinite tree, identify the collection of fringes \(\{t_i : i \ge 0\}\) with the positive integers \(\mathbb{Z}_+\) and add nearest–neighbour edges between the roots of \(t_i\) and \(t_{i+1}\) for each \(i \ge 0\). In other words, we join the roots of the fringes along a single infinite ray
+</p>
+\[
+t_0 \text{ -- } t_1 \text{ -- } t_2 \text{ -- } \cdots ,
+\]<p>
+and attach each finite tree \(t_i\) at its root. The resulting object is an infinite, locally finite tree with a <strong>unique infinite path</strong>.</p>
+<p>For each \(k\) we may look at the truncated sequence
+</p>
+\[
+F_k(0,\omega) = (t_0,\dots,t_k),
+\]<p>
+and we call \(t_0\) the <strong>fringe of the sin-tree</strong> associated with \(\omega\).</p>
+
+<h2 class="relative group">Intro
+    <div id="intro" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#intro" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Now, after we have the basics of the $\mathbb{T}$ space, we can state their model and how it differs the classical uniform tree.
+They construct a sequence of trees ${\mathcal{T}_n}$ in the following way:</p>
+<ul>
+<li>$\mathcal{T}_1$ is the root</li>
+<li>Each $n$ we add a vertex and assign the edge $e_{n,k}$ uniformly following
+\[\mathbb{P}(k=v)=1_{\{j(n)\leq v \leq n\}}\]
+where $j(n): \mathbb{N}\rightarrow \mathbb{N}$ non-decreasing function such that $j(n)\leq n : \forall n\geq 1$.</li>
+</ul>
+<p>One must think of the function $j(n)$ as dilution of information I mentioned on the intro.</p>
+<p><em><strong>Observation</strong></em></p>
+<ul>
+<li>The original paper has a $f(D_n(v))$ function in front of the indicator for the cases when one want to take into account the degree of the vertex.</li>
+<li>Also, note that taking $j(n)=1$ is just the standard random tree.</li>
+</ul>
+<p>The paper consider the following functions
+</p>
+\[j(n)=\lfloor \beta n\rfloor \qquad j(n)=n-\lfloor n^{\beta} \rfloor\]<p>
+with $\beta\in (0,1)$.
+In order to understand what the paper problem is, let&rsquo;s first do some simulations. In order,</p>
+<div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+<p>
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/Tree_snap.png" alt="Tree 1" />
+    
+    <figcaption>$\beta=0.3$</figcaption>
+    </figure>
+
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/Tree_snap2.png" alt="Tree 1" />
+    
+    <figcaption>$\beta=0.7$</figcaption>
+    </figure></p>
+</div>
+<p>This regime looks quite like a standard uniform random tree. However,</p>
+<div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+<p>
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/Tree_snap3.png" alt="Tree 1" />
+    
+    <figcaption>$\beta=0.3$</figcaption>
+    </figure>
+
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/Tree_snap4.png" alt="Tree 1" />
+    
+    <figcaption>$\beta=0.7$</figcaption>
+    </figure></p>
+</div>
+<p>There is a major change in geometry, one would suspect there is a phase transition in $\beta=0.5$. The whole objective of their paper is to understand these processes when $n\rightarrow \infty$. But for us to even approach that, we should first understand how or to what can a sequence of trees converge.</p>
+
+<h2 class="relative group">Convergence on the space of trees
+    <div id="convergence-on-the-space-of-trees" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#convergence-on-the-space-of-trees" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Let \(\{\mathcal{T}_n\}_{n\ge 1}\) be a sequence of rooted trees. For \(n\ge 1\) and each fixed \(k\ge 0\), we define the empirical distribution of the fringes up to distance \(k\) by<br>
+</p>
+\[
+\mathcal{B}_n^{(k)}
+  := \frac{1}{n}\sum_{v\in \mathcal{T}_n}
+      \delta_{F_k\bigl(v,\mathcal{T}_n\bigr)}.
+\]<p>Thus \(\{\mathcal{B}_n^{(k)}\}_{n\ge 1}\) can be viewed as a sequence of random probability measures on the space \(M(\mathbb{T}^k)\).</p>
+<p>Fix a probability measure \(\omega\) on \(\mathbb{T}\).</p>
+<ul>
+<li>
+<p>We say that the sequence of trees \(\{ \mathcal{T}_n \}\) <strong>converges in expectation in the fringe sense</strong> to \(\omega\) if
+</p>
+\[
+  \mathbb{E}\bigl[\mathcal{B}_n^{(0)}\bigr]\;\to\; \omega
+  \qquad\text{as } n\to\infty.
+  \]</li>
+<li>
+<p>We say that \(\{\mathcal{T}_n\}\) <strong>converges in probability in the fringe sense</strong> to \(\omega\) if
+</p>
+\[
+  \mathcal{B}_n^{(0)} \;\to\; \omega
+  \]<p>
+in probability, with respect to the weak topology on measures (Portmanteau).</p>
+</li>
+<li>
+<p>We say that \(\{\mathcal{T}_n\}\) <strong>converges in probability in the extended fringe sense</strong> to a limiting infinite random sin-tree \(\mathcal{T}_\infty\) if, for all \(k\ge 0\),
+</p>
+\[
+  \mathcal{B}_n^{(k)}
+    \;\to\;
+    \mathbb{P}\bigl(F_k(0,\mathcal{T}_\infty)\in \cdot\bigr),
+  \]<p>
+again in the weak sense, taking the right-hand side as a probability measure on \(\mathbb{T}^k\).</p>
+</li>
+</ul>
+<p>It is immediate that if we take the fixed measure \(\omega\) to be the law of the fringe of \(\mathcal{T}_\infty\) on \(\mathbb{T}\), that is
+</p>
+\[
+\omega(\cdot)
+  = \mathbb{P}\bigl(F_0(0,\mathcal{T}_\infty)\in \cdot\bigr),
+\]<p>
+then convergence in the extended fringe sense implies convergence in probability in the fringe sense.</p>
+<p>Aldous developed the general theory of fringe distributions <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> and many related results; his work on extremal points of the corresponding space of measures is particularly powerful. We will later use that, in fact, if one works with an extremal distribution (in terms of point inside said convex space), convergence in means is sufficient.</p>
+
+<h2 class="relative group">Results
+    <div id="results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Here I state the two results that interest me most.</p>
+<p><strong>Result 1.</strong><br>
+For the case \(j(n)=\lfloor \beta n\rfloor\) with \(\beta\in(0,1)\), the sequence \(\{\mathcal{T}_n\}\) converges in the extended fringe sense to a distribution \(\omega_\beta\).</p>
+<p>Here \(\omega_\beta\) is the distribution of the standard branching process driven by a Poisson process \(N_\beta\) with rate \((1-\beta)^{-1}\) on the time interval \([0,\log(\beta^{-1})]\), observed at a random time \(T_1\), where \(T_1\sim \mathrm{Exp}(1)\).</p>
+<p>The mere fact that one can write down the limiting distribution explicitly is, to me, quite striking.</p>
+<p><strong>Result 2.</strong><br>
+For the case \(j(n)=n-\lfloor \beta n\rfloor\) with \(\beta\in(0,1)\), the sequence \(\{\mathcal{T}_n\}\) converges in the extended fringe sense to the unique infinite sin-tree whose fringe distribution is \(\omega_{P,1}\).</p>
+<p>The measure \(\omega_{P,1}\) is the law of a standard critical Galton–Watson branching process with Poisson offspring distribution of mean \(1\). Notice that this limit is <strong>independent of \(\beta\)</strong>, and in fact coincides with the local weak limit of a uniform random tree.</p>
+<p>One might suspect that this contradicts the geometric differences we observed earlier, but these are <strong>local</strong> results. In fact, they covered the global geometry and phase transitions in a topological framework (via Gromov–Hausdorff convergence).</p>
+
+<h2 class="relative group">Outline proof 1
+    <div id="outline-proof-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#outline-proof-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We call \(T_k^n\) the time at which the \(k\)-th child of vertex \(n\) arrives; i.e.
+</p>
+\[
+T_k^n := \inf\{\ell : \deg(n,\mathcal{T}_\ell) = k+1\},
+\]<p>
+and \(\rho_j^n\) the \(j\)-th vertex in the fringe of \(n\).</p>
+<p>We then define, for \(j\ge 0\) and \(k\ge 1\),
+</p>
+\[
+T_{j,k}^n := T_k^{\rho_j^n},
+\qquad
+\tau_{j,k}^n := \log\!\left(\frac{T_{j,k}^n}{T_{j,k-1}^n}\right),
+\]<p>
+the arrival time between \(k-1\) and \(k\) inside the fringe of \(\rho_j^n\).</p>
+<p>They show, with some effort, that
+</p>
+\[
+\bigl((\tau_{j,k}^n),\: j\geq 0\bigr)
+\;\xrightarrow{d}\;
+\bigl((\mathcal{E}_ {j,k}), \:j\geq 0 \bigr),
+\]<p>
+where \(\mathcal{E}_ {j,k}\) are the arrival times of \(N_\beta\).</p>
+<p>In fact, if we consider our process in logarithmic time, vertex \(j\ge 2\) appears at time \(\log j\), and a uniformly chosen vertex appears at time
+</p>
+\[
+\log n - \log \lfloor nU\rfloor,
+\]<p>
+where \(U\sim \mathrm{Unif}(0,1)\).</p>
+<p>We now rely on the following construction. Given \(t\in\mathbb{R}_+\) and \(w\in\mathbb{R}^{\mathbb{N}\times\mathbb{N}}\) we can construct a finite tree
+</p>
+\[
+\mathbf{T}(t,w)\in\mathbb{T}
+\]<p>
+by taking, for \(j>0\), \(k\ge 1\), that \(w_{j,k}\) is the age of vertex \(j\) when its \(k\)-th child is born.</p>
+<p>We keep all vertices that satisfy \(w_{j,k}\le t\). For \(0\le j\le \mathbf{T}(t,w)\) we denote by \(\tau_j(t,w)\) the birth time of the \(j\)-th vertex of \(\mathbf{T}(t,w)\) and set
+</p>
+\[
+n(t,w) := \sup\{j\ge 0 : \tau_j(t,w)\le t\},
+\]<p>
+the last vertex we have with birth time less than \(t\), i.e. the height.</p>
+<p>We define
+</p>
+\[
+\mathbf{W} := \{(t,w) : n(t,w)<\infty,\ \tau_{j}(t,w)\neq t\},
+\]<p>
+and thus \(\mathbf{T}:\mathbf{W}\to\mathbb{T}\) is continuous.</p>
+<p>Applying this to the discrete construction above, we can write the fringe of a uniformly chosen vertex \(\ell\) as
+</p>
+\[
+\mathbf{T}\bigl(\log n - \log \lfloor nU\rfloor,\; W^{\lfloor nU\rfloor}\bigr),
+\]<p>
+where \(W^{\lfloor nU\rfloor}\) is the matrix formed by the \(\tau^{\lfloor nU\rfloor}_{j,k}\).</p>
+<p>By the convergence of the inter-arrival times,
+</p>
+\[
+\bigl(\log n - \log \lfloor nU\rfloor,\; W^{\lfloor nU\rfloor}\bigr)
+\;\xrightarrow{d}\;
+\bigl(T_1, W^*\bigr),
+\]<p>
+where \(T_1\sim\mathrm{Exp}(1)\) and \(W^*\) is the matrix associated to \((\mathcal{E}_ {j,k})\). By the continuous mapping theorem,
+</p>
+\[
+\mathbf{T}\bigl(\log n - \log \lfloor nU\rfloor,\; W^{\lfloor nU\rfloor}\bigr)
+\;\xrightarrow{d}\;
+\mathbf{T}(T_1,W^*),
+\]<p>
+which has distribution \(\omega_\beta\).</p>
+
+<h2 class="relative group">Outline proof 2
+    <div id="outline-proof-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#outline-proof-2" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Again the idea is to approximate the discrete tree using a continuous time branching process. In fact, what we approximate is the BFS of the fringe of a vertex in the \(\mathcal{T}_ n\).</p>
+<p>A lemmas is needed, approximate de degree of vertex \(j\) at time \(n \equiv D_{j,n}\) by a \(Poiss(1)\).</p>
+<p><strong>Lemma.</strong> Let \(D_{j,n}\) as before. For any \(\delta>1\), there exists \(j_0\) such that</p>
+\[
+d\bigl(D_{j,n}, \text{Pois}(1)\bigr)
+\le
+\delta\bigl(1-(1+\delta j^{\beta-1})^{-\beta}\bigr)+\delta j^{-\beta}
++\max(\delta-1, j^{-\beta})
++\mathbf{1}_{\{N_j \ge n-j\}}
+\left|\frac{n-j}{j^\beta}-1\right|,
+\]<p>
+where \(d\) is just the total variation distance between distributions and
+</p>
+\[
+N_j := |\{i : i-i^\beta \le j < i\}|.
+\]<p>In order to proceed we need to understand \(N_j\). Recall that we are under the regime \(j(n)=n-\lfloor n^\beta \rfloor\) so \(N_j\) just tells us the amount of vertices that have access to \(j\). Thus also tells us the max possible vertex that could reach \(j\).</p>
+<p>Now, the expression above just partition the cases on whether the vertex \(j\) is reachable at time \(n\), \(N_j \le n\) or not. We first need to understand some properties of \(N_j\).</p>
+<p><strong>Lemma.</strong> We have</p>
+<p>i) \(N_j \ge j^{\beta}-1\), \(j>1\).</p>
+<p>ii) For any \(\delta>1\), there exists \(j_0>1\) such that
+</p>
+\[
+N_j \le \delta j^\beta \qquad \forall j\ge j_0.
+\]<p>Proving this is almost immediate.</p>
+<p>For i) just note that \(\lfloor j^\beta\rfloor \le (j+\lfloor j^\beta\rfloor)^\beta\) because
+\(\lfloor j^\beta\rfloor \le \lfloor j\rfloor ^{\beta}\) and \( \lfloor j\rfloor \le j+\lfloor j^\beta\rfloor\).</p>
+<p>Thus,
+</p>
+\[
+(j+\lfloor j^\beta\rfloor) - (j+\lfloor j^\beta\rfloor)^\beta \le j,
+\]<p>
+and because \(N_j\) is the biggest index such that \(i-i^\beta \le j\) we have
+</p>
+\[
+N_j \ge j+\lfloor j^\beta\rfloor \ge j^\beta-1.
+\]<p>For (ii) the argument is quite amusing. If
+</p>
+\[
+(j+\delta j^\beta) - (j+\delta j^\beta)^\beta \le j,
+\]<p>
+then
+</p>
+\[
+\delta = (1+\delta j^{\beta-1})^{-\beta}.
+\]<p>
+When \(j\to\infty\) the right side tends to \(1\).</p>
+<p>Hence if \(\delta>1\) there must be a \(j_0\) such that
+</p>
+\[
+(j_0+\delta j_0^\beta) - (j_0+\delta j_0^\beta)^\beta \ge j_0.
+\]<p>
+\(\Rightarrow \delta j_0^\beta > N_j \quad \forall j\ge j_0.\)</p>
+<hr>
+<p>Now the proof of the original lemma follows.</p>
+<p>Taking \(j\leq i \)
+</p>
+\[
+Y_{i,j} = \mathbf{1}_{\{ i \text{ connects to } j \}}.
+\]<p>
+Thus,
+</p>
+\[
+Y_{i,j} \equiv \text{Ber}\!\left(\frac{\mathbf{1}_{\{i-i^\beta \le j\}}}{i^\beta}\right)
+\]<p>
+because the positive case is when \(i-i^\beta\le j\) and the total possibilities are \((i-(i-i^\beta))=i^\beta\).</p>
+<p>Also take
+</p>
+\[
+N_{j,n} = \min\{N_j,\, n-j\}.
+\]<p>We approximate the degree summing up these Bernoullis, thus using the lemma we state that for \(j\) large enough, we can bound the &ldquo;error&rdquo; by
+</p>
+\[
+d\bigl(D_{j,n}, \text{Bin}(N_{j,n}, j^{-\beta})\bigr)
+\le
+\sum_i \mathbf{1}_{\{i-i^\beta \le j\}}
+\left| j^{-\beta} - i^{-\beta} \right|
+\le
+N_{j,n}\left| j^{-\beta} - (j+\delta j^\beta)^{-\beta} \right|
+\le
+\delta\bigl(1-(1+\delta j^{\beta-1})^{-\beta}\bigr).
+\]<p>Now we approximate the binomial with a Poisson(1):
+</p>
+\[
+d\bigl(\text{Bin}(N_{j,n}, j^{-\beta}), \text{Poiss}(1)\bigr)
+\le
+d\!\left(\text{Bin}(N_{j,n}, j^{-\beta}), \text{Poiss}\!\left(\frac{N_{j,n}}{j^\beta}\right)\right)
++
+d\!\left(\text{Poiss}\!\left(\frac{N_{j,n}}{j^\beta}\right), \text{Poiss}(1)\right)
+\]<p>
+</p>
+\[
+\le
+\frac{N_{j,n}}{j^{2\beta}} + \left|\frac{N_{j,n}}{j^\beta} - 1\right|.
+\]<p>Using \(N_{j,n}\le \delta j^\beta\) and
+</p>
+\[
+\left|\frac{N_{j,n}}{j^\beta}-1\right|
+\le
+\left|\frac{N_j}{j^\beta}-1\right|
++
+\mathbf{1}_{\{N_j>n-j\}}\left|\frac{n-j}{j^\beta}-1\right|
+\]<p>
+we obtain the desired inequality
+</p>
+\[
+d\bigl(D_{j,n}, \text{Poiss}(1)\bigr)
+\le
+\delta\bigl(1-(1+\delta j^{\beta-1})^{-\beta}\bigr)+\delta j^{-\beta}+ \max(\delta-1, j^{-\beta})+ \mathbf{1}_{\{N_j>n-j\}}\left|\frac{n-j}{j^\beta}-1\right|.
+\]<hr>
+<p>The proof of the result now stems from the Aldous extremal point tool mentioned. We just have to show.</p>
+<p>For a tree \(\mathcal{T}\in\mathbb{T}\) with \(|\mathcal{T}|=k\), \(U\equiv \text{Unif}(0,1)\),</p>
+\[\lim_{n\to\infty} \mathbb{P}\bigl(F(\lfloor nU\rfloor, \mathcal{T}_ n)=\mathcal{T} \bigr)=\lim_{n\to\infty}\int^{1}_ {0} \mathbb{P}\bigl(F(\lfloor nu\rfloor, \mathcal{T}_ n)=\mathcal{T} \bigr) du \rightarrow \mathbb{P}(w_{Poiss,1}=\mathcal{T} )\]<p>For this, fix \(u\in[0,1]\). Tomamos la BFS of the fringe of \(T_n^u\), where we stop if the \(\lfloor nu\rfloor\) fringe differs from \(T\) or if it is equal to \(T\). Recall at most we encounter \(k\).</p>
+<p>They argue the \(k\) explorated vertices are all such \(N_j\le nu\).</p>
+<p>Using previous lemma with \(\delta=2\) there exists \(N\in\mathbb{N}\) such that the index of any vertex attatching to \(j\) for \(j \geq N\) is bounded by \(j+2j^\beta\). Thus for \(n\ge N/u\) the index of the vertex that attaches to \(\lfloor nu\rfloor\) is bounded by \(nu+2(nu)^\beta\). We could iterate this idea so the index of the \(k\) vertex attatching the fringe is bounded by
+</p>
+\[
+nu+2(nu)^\beta+2(nu+2(nu)^\beta)^\beta + \cdots= nu+O(n^\beta).
+\]<p>
+Thus the lemma tells us that those \(k\) vertices are good at time \(n\), i.e. \(N_j\le nu\).</p>
+<p>Now just take \(\delta>1\Rightarrow \exists \widetilde{N}>N_u\) such that \(1\le j \le k\)
+</p>
+\[
+d\bigl(D_{j,n}, \text{Poiss}(1)\bigr)
+\le
+\delta\bigl(1-(1+\delta j^{\beta-1})^{-\beta}\bigr)+ \delta j^{-\beta}+\max(\delta-1, j^{-\beta})
+\qquad\forall n\ge \widetilde{N}.
+\]<p>
+We conclude by</p>
+\[\limsup_{n\to\infty} \left| \mathbb{P}\left(F(\lfloor nu \rfloor,\mathcal{T}_ n)=\mathcal{T} \right)-\mathbb{P}\left(w_{Poiss,1}=\mathcal{T} \right)\right| \leq k(\delta-1) \quad \forall \delta >1. 
+\]
+<h1 class="relative group">Conclusion
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>I had a lot of fun reading the paper, it is true that they go on to analyze the geometry and height of each regime, but I was mainly interested in the concept of local weak convergence.</p>
+<p>I had the idea of considering the regime \(j(n)= n- \lfloor ln(n) \rfloor \) but one may note that for any \(\beta \in (0,1)\), \(n-ln(n)\geq n-\lfloor n^{\beta} \rfloor\). Thus the overall result should be the same, representationwise looks pretty similar to taking a small \(\beta\)</p>
+<div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+<p>
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/Tree_snap5.png" alt="Tree 1" />
+    
+    <figcaption>$j(n)=n-\lfloor ln(n)\rfloor $</figcaption>
+    </figure>
+
+  <figure>
+        <img class="my-0 rounded-md" src="/images/Images/Tree_snap6.png" alt="Tree 1" />
+    
+    <figcaption>$j(n)=n-\lfloor ln(n^{1/3}) \rfloor $</figcaption>
+    </figure></p>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Omer Angel, Shankar Bhamidi, Serte Donderwinkel, Neeladri Maitra, Akshay Sakanaveeti, Evolution of recursive trees with limited memory, arXiv:2510.18856&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>D. Aldous, Asymptotic fringe distributions for general families of random trees, The Annals of Applied Probability
+(1991), 228–266&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </section>
+    <footer class="pt-8">
+      
+
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>
