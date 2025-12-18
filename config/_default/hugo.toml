@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 baseURL = "https://mrb61.github.io/hugoblog/"
-publishDir = "docs"
+#publishDir = "docs"
 canonifyURLs = true
 theme = "blowfish"
 
