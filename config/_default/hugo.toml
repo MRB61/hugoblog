@@ -4,7 +4,7 @@
 
 baseURL = "https://mrb61.github.io/hugoblog/"
 publishDir = "docs"
-canonifyURLs = false
+canonifyURLs = true
 theme = "blowfish"
 
 title='On everything'
