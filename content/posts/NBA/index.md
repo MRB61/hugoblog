@@ -76,7 +76,7 @@ This chart is composed by two. The top one portrays the FGA attempts distributio
 
 My favourite versions of the Suns where 2020-2021 (the finals team), and 2022-23 when we got KD mid season and were really good in the playoffs, ultimately we lost to Denver who continued to win it all. Now let's look at the chart for those two seasons, what does it have in common?
 
-THE DISTRIBUTION WAS MUCH MORE UNIFORM!! Booker was much more versatile those seasons. When you threat with several shots or possibilities the rival deffense must adapt, which is not that easy. Data back what my eyes are seeing, running point is limiting his offense in the sense that the shots he recieves now are much more concentrated in terms of kind.
+THE DISTRIBUTION WAS MUCH MORE CONCENTRATED!! Booker was much more versatile those seasons. When you threat with several shots or possibilities the rival deffense must adapt, which is not that easy. Data back what my eyes are seeing, running point is limiting his offense in the sense that the shots he recieves now are much more concentrated in terms of kind.
 
 ## Conlcusion
 
